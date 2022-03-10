@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-  likedPostsId.push(id);
+  likedPostsId.push(id);      // correctio-1: corrected the method name from plus to push. likedPostsId is an array.
   showPosts(posts);
 };
 
@@ -62,7 +62,7 @@ const createPost = (post) => {
                     target="_blank"
                     class="post__avatar"
                   >
-                    <img src="${image}" alt="User Picture" />
+                    <img src="${post.userImage}" alt="User Picture" />    <!-- correction-2: post.userImage will give the profile picture of the user -->
                   </a>
                   <a href="#" class="post__user">phero</a>
                 </div>
