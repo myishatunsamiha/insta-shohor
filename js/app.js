@@ -27,7 +27,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";     // correction-3: changed 'text' string to text variable when the length of the description is less than 30
 };
 
 const switchTab = (id) => {
