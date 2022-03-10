@@ -151,7 +151,8 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  posts.forEach((post) => {
+  document.getElementById("reported").textContent = '';     // correction-5: cleared the reported div section
+  reportedPosts.forEach((post) => {                         // correction-5: added the reportedPosts the reported div section instead of the posts
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
