@@ -135,7 +135,8 @@ const showPosts = (posts) => {
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
 
-  posts.forEach((post) => {
+  const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));    // correction-1: filtering the reported posts in order to display the visible posts correctly while pressing the like button
+  remainingPosts.forEach((post) => {
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
@@ -143,6 +144,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
   const likedPosts = getLikedPosts();
+  document.getElementById("liked").textContent = "";    // correction-6: cleared the liked div section
   likedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
