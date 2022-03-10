@@ -119,9 +119,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0]?.user}     <!-- correction-4: inside post object comments is an array. on the 0th index it has an object which contains the user and the text/comment of the user. -->
                       </a>
-                      ${post.comments?.text}
+                      ${post.comments[0]?.text}          <!-- correction-4: inside post object comments is an array. on the 0th index it has an object which contains the user and the text/comment of the user. -->
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
