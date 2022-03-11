@@ -85,6 +85,18 @@
             keeps track of the call stack and the event queue simultaneously. Whenever the event loop gets the stack
             empty, it pushes the queue functions (if there is any) into the call stack for processing.
         </p>
+
+        <br><br>
+        <h3>Q. Difference between local storage and session storage?</h3>
+        <p>Ans: Local storage doesn't get removed after closing a tab or the browser. However, it can be deleted
+            manually by the user. The local storage data for a particular website is the same on every tab and window.
+            Local
+            storage remains when the operating system reboots and the browser restarts.
+
+            Sesssion storage gets cleared when a tab or a window is closed. The storage lasts only during the active
+            session of the page. If we open two tabs for the same website, two diffenet session storage will be created
+            on these two tabs. Session storage remains after page refreshes or reloads.
+        </p>
     </section>
 
     <footer></footer>
