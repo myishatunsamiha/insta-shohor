@@ -136,7 +136,7 @@ const showPosts = (posts) => {
   productsContainer.innerHTML = "";
 
   const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));    // correction-1: filtering the reported posts in order to display the visible posts correctly while pressing the like button
-  remainingPosts.forEach((post) => {
+  remainingPosts.forEach((post) => {      // correction-1: displaying the remaining posts after filtering the reported ones
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
