@@ -79,11 +79,10 @@
             any asynchoronus function(any events, setTimeout, etc.), the asynchronous function is immediated sent to the
             browser api and after a duration the function is sent to the event queue. All the
             asynchronous functions get stored in the event queue sequentially. When all the
-            functions and operations get popped out and executed from the call stack, the stack becomes empty. Then the
-            functions from the queue(first-in first-out manner) get into the call stack sequentially and in the call
-            stack each of them gets executed. The <b>event loop</b>
+            functions and operations get executed and popped out from the call stack, the stack becomes empty. Then the
+            functions are enqueued from the queue, get into the call stack and get executed one by one. The event loop
             keeps track of the call stack and the event queue simultaneously. Whenever the event loop gets the stack
-            empty, it pushes the queue functions (if there is any) into the call stack for processing.
+            empty, it pushes the queue functions one by one (if there is any) into the call stack for processing.
         </p>
 
         <br><br>
@@ -91,11 +90,13 @@
         <p>Ans: Local storage doesn't get removed after closing a tab or the browser. However, it can be deleted
             manually by the user. The local storage data for a particular website is the same on every tab and window.
             Local
-            storage remains when the operating system reboots and the browser restarts.
-
-            Sesssion storage gets cleared when a tab or a window is closed. The storage lasts only during the active
-            session of the page. If we open two tabs for the same website, two diffenet session storage will be created
-            on these two tabs. Session storage remains after page refreshes or reloads.
+            storage remains when the operating system reboots or the browser restarts.
+            <br>
+            Sesssion storage gets removed when a tab or a window is closed. The session storage lasts only during the
+            active
+            session of the page or site. If we open two tabs for the same website, two diffenet session storage will be
+            created
+            on these two tabs. Session storage remains after page refresh and reloads.
         </p>
     </section>
 
